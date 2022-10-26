@@ -1,0 +1,19 @@
+# translatation one
+    drawPiramide()
+    glPushMatrix()
+    glTranslate(210, 210, 0) #proses translasi
+    glRotate(50, 0, 0, 1) #proses rotasi
+    glScalef(0.5, 0.5, 0) #proses skala
+    drawPiramide()
+    glPopMatrix()
+    glFlush()
+
+    # translatation two
+    drawPiramide()
+    glPushMatrix()
+    glTranslate(310, 210, 0) #proses translasi
+    glRotate(90, 0, 0, 1) #proses rotasi
+    glScalef(0.25, 0.25, 0.25) #proses skala
+    drawPiramide()
+    glPopMatrix()
+    glFlush()
