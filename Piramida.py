@@ -14,7 +14,7 @@ def drawPiramide():
     glColor(0.0,0.0,0.0)
 
     #segitiga bawah
-    #glColor(0.0,1.0,0.0)
+    glColor(0.0,1.0,0.0)
     glBegin(GL_TRIANGELS)
     glVertex2i(10,10)
     glVertex2i(50,10)
@@ -23,7 +23,7 @@ def drawPiramide():
     glFlush()
     
     #segitiga kanan
-    #glColor(0.0,1.0,0.0)
+    glColor(0.0,1.0,0.0)
     glBegin(GL_TRIANGELS)
     glVertex2i(50,10)
     glVertex2i(30,50)
@@ -32,7 +32,7 @@ def drawPiramide():
     glFlush()
 
     #segitiga kiri
-    #glColor(0.0,1.0,0.0)
+    glColor(0.0,1.0,0.0)
     glBegin(GL_TRIANGELS)
     glVertex2i(10,10)
     glVertex2i(30,30)
@@ -43,13 +43,34 @@ def drawPiramide():
 def render():
     glClear(GL_COLOR_BUFFER_BIT)
     glColor3f(1.0,0.0,0.0)
+
+    # translatation one
     drawPiramide()
     glPushMatrix()
-    glTranslate(210, 210, 0) #proses translasi
-    glRotate(50, 0, 0, 1) #proses rotasi
-    glScalef(0.5, 0.5, 0) #proses skala
+    glTranslate(210, 210, 0)
+    glRotatef(45.0, 0.0, 0.0, 1.0)
+    glScalef(0.5, 0.5, 0.5)
     drawPiramide()
     glPopMatrix()
+
+    # translatation two
+    drawPiramide()
+    glPushMatrix()
+    glTranslate(560, 540, 0)
+    glRotatef(190.0, 0.0, 0.0, 1.0)
+    glScalef(0.25, 0.25, 0.25)
+    drawPiramide()
+    glPopMatrix()
+
+    # translatation three
+    drawPiramide()
+    glPushMatrix()
+    glTranslate(530, 575, 0)
+    glRotatef(260.0, 0.0, 0.0, 1.0)
+    glScalef(0.15, 0.15, 0.15)
+    drawPiramide()
+    glPopMatrix()
+
     glFlush()
     
 def main():
