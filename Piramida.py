@@ -10,7 +10,7 @@ def init():
     gluOrtho2D(0.0,500.0,0.0,500.0)
 
 def drawPiramide():
-    glClear(GL_COLOR_BUFFER_BIT)
+    #glClear(GL_COLOR_BUFFER_BIT)
     glColor(0.0,0.0,0.0)
 
     #segitiga bawah
@@ -50,24 +50,6 @@ def render():
     glTranslate(210, 210, 0)
     glRotatef(45.0, 0.0, 0.0, 1.0)
     glScalef(0.5, 0.5, 0.5)
-    drawPiramide()
-    glPopMatrix()
-
-    # translatation two
-    drawPiramide()
-    glPushMatrix()
-    glTranslate(560, 540, 0)
-    glRotatef(190.0, 0.0, 0.0, 1.0)
-    glScalef(0.25, 0.25, 0.25)
-    drawPiramide()
-    glPopMatrix()
-
-    # translatation three
-    drawPiramide()
-    glPushMatrix()
-    glTranslate(530, 575, 0)
-    glRotatef(260.0, 0.0, 0.0, 1.0)
-    glScalef(0.15, 0.15, 0.15)
     drawPiramide()
     glPopMatrix()
 
